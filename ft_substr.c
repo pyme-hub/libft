@@ -6,27 +6,9 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:08:27 by kkongim           #+#    #+#             */
-/*   Updated: 2022/02/21 20:39:04 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/05 17:53:25 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-Parameters_
-	s: The string from which to create the substring.
-	start: The start index of the substring in the string ’s’.
-	len: The maximum length of the substring.
-
-Return value
-	The substring.
-	NULL if the allocation fails.
-
-External functs:
-	malloc
-
-Description
-	Allocates (with malloc(3)) and returns a substring from the string ’s’.
-	The substring begins at index ’start’ and is of maximum size ’len’
-*/
 
 #include "libft.h"
 

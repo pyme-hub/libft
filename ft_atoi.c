@@ -6,23 +6,11 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:01:57 by kkongim           #+#    #+#             */
-/*   Updated: 2022/02/21 20:02:01 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/05 17:51:03 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-int
-atoi(const char *str);
-
-DESCRIPTION
-	The atoi() function converts the initial portion of the string
-	pointed to by str to int representation.
-
-	It is equivalent to:
-		(int)strtol(str, (char **)NULL, 10);
-*/
 #include "libft.h"
-// #include "ft_isdigit.c"
 
 int	is_sign(int c)
 {
@@ -62,12 +50,3 @@ int	ft_atoi(const char *str)
 	}
 	return (ret * sign);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	int	i;
-// 	i = ft_atoi("2147483649");
-// 	printf("%d", i);
-// }

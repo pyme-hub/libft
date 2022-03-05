@@ -6,15 +6,11 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:02:48 by kkongim           #+#    #+#             */
-/*   Updated: 2022/02/21 20:02:50 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/05 17:51:25 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* RETURN VALUES
-	The isalpha() function returns zero if the character tests
- 	false and returns non-zero if the character tests true.
-*/
-#include "libc.h"
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

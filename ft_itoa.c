@@ -6,26 +6,56 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:03:20 by kkongim           #+#    #+#             */
-/*   Updated: 2022/02/21 20:03:26 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/05 17:51:43 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Parameters
-	n: the integer to convert.
-
-Return value
-	The string representing the integer.
-	NULL if the allocation fails.
-External functs.
-	malloc
-
-Description
-	Allocates (with malloc(3)) and returns a string representing
-	the integer received as an argument.
-	Negative numbers must be handled.
-*/
-
 #include "libft.h"
 
-char	*ft_itoa(int n);
+static int	ft_getlen(long num)
+{
+	int	c;
+
+	c = 0;
+	if (num < 0)
+	{
+		num *= -1;
+		c++;
+	}
+	while (1)
+	{
+		num /= 10;
+		c++;
+		if (num == 0)
+			return (c);
+	}
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	int		isneg;
+	size_t	len;
+	long	num;
+
+	num = n;
+	isneg = (n < 0);
+	len = ft_getlen(num);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len--] = '\0';
+	if (isneg)
+	{
+		str[0] = '-';
+		num *= -1;
+	}
+	if (num == 0)
+		str[0] = '0';
+	while (num > 0)
+	{
+		str[len--] = num % 10 + '0';
+		num /= 10;
+	}
+	return (str);
+}
