@@ -6,23 +6,9 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:06:39 by kkongim           #+#    #+#             */
-/*   Updated: 2022/03/05 17:48:35 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/08 18:41:20 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-Parameters
-	s1: The prefix string.
-	s2: The suffix string.
-Return value
-	The new string.
-	NULL if the allocation fails.
-External functs.
-	malloc
-Description
-	Allocates (with malloc(3)) and returns a new string,
-	which is the result of the concatenation of ’s1’ and ’s2’.
-*/
 
 #include "libft.h"
 
