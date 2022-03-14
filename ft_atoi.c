@@ -6,7 +6,7 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:01:57 by kkongim           #+#    #+#             */
-/*   Updated: 2022/03/05 17:51:03 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/13 16:15:22 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	is_space(int c)
 
 int	ft_atoi(const char *str)
 {
-	int	ret;
-	int	sign;
+	long int	result;
+	long int	sign;
 
-	ret = 0;
+	result = 0;
 	sign = 1;
 	if (*str == 0 || *str == '\e')
 		return (0);
@@ -45,8 +45,8 @@ int	ft_atoi(const char *str)
 	}
 	while (ft_isdigit(*str))
 	{
-		ret = (ret * 10) + *str - '0';
+		result = (result * 10) + (*str - '0');
 		str++;
 	}
-	return (ret * sign);
+	return (result * sign);
 }

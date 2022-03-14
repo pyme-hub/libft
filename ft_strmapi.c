@@ -6,7 +6,7 @@
 /*   By: kkongim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 20:07:28 by kkongim           #+#    #+#             */
-/*   Updated: 2022/03/05 20:18:32 by kkongim          ###   ########.fr       */
+/*   Updated: 2022/03/12 20:42:24 by kkongim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*str;
-	unsigned int	i;
+	char	*str;
+	size_t	i;
 
 	if (!s || !f)
 		return (NULL);
-	str = (char *)malloc(ft_strlen(s) + 1);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		str[i] = (*f)(i, s[i]);
-		++i;
+		str[i] = f(i, s[i]);
+		i++;
 	}
 	str[i] = '\0';
 	return (str);
